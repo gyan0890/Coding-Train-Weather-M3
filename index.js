@@ -4,6 +4,7 @@ const cors = require('cors');
 const dataStore = require('nedb');
 const app = express();
 require('dotenv').config();
+const port = process.env.port || 3000;
 
 console.log(process.env);
 
@@ -53,4 +54,4 @@ response.json(json);
 });
 
 
-app.listen(3000, () => console.log('Listening at port 3000'));
+app.listen(port, () => console.log(`Listening at port ${port}`));
